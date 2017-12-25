@@ -18,7 +18,9 @@ var verzenden = document.getElementById('verzenden').addEventListener('click', (
 
   socket.emit("bericht-data",data);
 
+});
 
 
-
+socket.on("bericht-data", (data) => {
+      console.log(data.naam + ": " + data.bericht);
 });

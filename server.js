@@ -12,7 +12,8 @@ const io = socket(server)
 io.sockets.on('connection',(socket) => {
       //console.log("nieuwe connectie met de server");
       socket.on("bericht-data",(data) => {
-          console.log(data.naam + ": " + data.bericht);
+          //console.log(data.naam + ": " + data.bericht);
+          io.emit("bericht-data",data);
 
       });
 
