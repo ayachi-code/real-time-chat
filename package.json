@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ayachi-code/real-time-chat/issues"
   },
-  "homepage": "https://github.com/ayachi-code/real-time-chat#readme"
+  "homepage": "https://github.com/ayachi-code/real-time-chat#readme",
+  "dependencies": {
+    "socket.io": "^2.0.4"
+  }
 }
