@@ -15,3 +15,8 @@ function setup() {
 
 
 }
+
+
+var verzenden = document.getElementById('verzenden').addEventListener('click' () => {
+  
+});
