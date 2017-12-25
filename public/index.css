@@ -15,4 +15,6 @@ body {
 
 #naam {
   width: 500px;
+  border-radius: 200px;
+  height: 50px;
 }
