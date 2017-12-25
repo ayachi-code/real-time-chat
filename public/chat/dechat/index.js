@@ -1,1 +1,1 @@
-var server = io();
+var socket = io();
