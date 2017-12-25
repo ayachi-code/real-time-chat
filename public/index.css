@@ -8,5 +8,11 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  
+  margin-left: -250px;
+}
+
+
+
+#naam {
+  width: 500px;
 }
