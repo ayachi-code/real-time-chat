@@ -8,3 +8,9 @@ socket.emit("naam",naam);
 socket.on("naam", (naam) => {
       console.log(naam);
 });
+
+function setup() {
+      //p tags worden hier geladen
+
+
+}
