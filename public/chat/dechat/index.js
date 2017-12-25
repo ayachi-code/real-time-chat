@@ -1,6 +1,7 @@
 var socket = io();
 
 var naam = localStorage.getItem("naam");
+var bericht = document.getElementById('bericht').value;
 
 socket.emit("naam",naam);
 
