@@ -5,9 +5,11 @@ var naam = localStorage.getItem("naam");
 
 function setup() {
       //p tags worden hier geladen
+      socket.emit("denaam",naam)
 
 
 }
+
 
 
 var verzenden = document.getElementById('verzenden').addEventListener('click', () => {
@@ -22,5 +24,15 @@ var verzenden = document.getElementById('verzenden').addEventListener('click', (
 
 
 socket.on("bericht-data", (data) => {
-      console.log(data.naam + ": " + data.bericht);
+      var uiteindelijke_bericht = data.naam + ": " + data.bericht;
+      //console.log(data.naam + ": " + data.bericht);
+      createP(uiteindelijke_bericht);
+
+
+});
+
+
+
+socket.on("gejoint",(data) => {
+    createP(data + ": " + " heeft de chat gejoint ")
 });
