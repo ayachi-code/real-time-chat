@@ -10,8 +10,9 @@ const io = socket(server)
 
 
 io.sockets.on('connection',(socket) => {
-      console.log("nieuwe connectie met de server");
+      //console.log("nieuwe connectie met de server");
       socket.on("naam",(naam) => {
           console.log(naam + " doet mee met de chat");
+          io.emit("naam",naam);
       });
 });
