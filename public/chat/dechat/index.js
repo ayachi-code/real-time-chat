@@ -26,7 +26,8 @@ var verzenden = document.getElementById('verzenden').addEventListener('click', (
 socket.on("bericht-data", (data) => {
       var uiteindelijke_bericht = data.naam + ": " + data.bericht;
       //console.log(data.naam + ": " + data.bericht);
-      createP(uiteindelijke_bericht);
+      var p = createP(uiteindelijke_bericht);
+      p.style('color: green');
 
 
 });
