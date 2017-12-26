@@ -58,12 +58,16 @@ var bericht_input = document.getElementById("bericht").addEventListener('focus',
 });
 
 
+//Als gene los laat
+var bericht_input_los = document.getElementById('bericht').addEventListener('blur',() => {
+  
+});
+
 
 //Als aan ontvangt log aan het typen en print het op het scherm als p
 socket.on("aan",(data) => {
   var goedemorgen = createP(data);
   console.log(data);
   goedemorgen.show();
-
 
 });
