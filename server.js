@@ -36,4 +36,14 @@ io.sockets.on('connection',(socket) => {
 
       });
 
+
+
+      socket.on("disconnect",() => {
+        
+      });
+
+
+
+
+
 });
