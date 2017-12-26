@@ -3,9 +3,15 @@ var socket = io();
 var naam = localStorage.getItem("naam");
 
 
+var atypenb;
+
+
 function setup() {
       //p tags worden hier geladen
       socket.emit("denaam",naam)
+
+      atypenb =  createP(naam + " is aan het typen").hide();
+
 
 
 }
@@ -57,9 +63,9 @@ var bericht_input = document.getElementById("bericht").addEventListener('focus',
 
 
 
-
 //Als aan ontvangt log aan het typen
 socket.on("aan",(data) => {
-  console.log("aan het typen");
+  console.log(data);
+  //atypenb.show();
 
 });

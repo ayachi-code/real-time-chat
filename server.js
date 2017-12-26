@@ -53,8 +53,8 @@ io.sockets.on('connection',(socket) => {
 
       //Als ik aan ontvang
       socket.on("aan",(data) => {
-            console.log(data);
-            io.emit("aan",data);
+            console.log(data + "is aan het typen...");
+            socket.broadcast.emit("aan",data);
       });
 
 
