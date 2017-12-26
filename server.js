@@ -9,6 +9,10 @@ const socket = require('socket.io');
 const io = socket(server)
 
 
+
+var gebruikers = [];
+
+
 io.sockets.on('connection',(socket) => {
       console.log("nieuwe connectie met de server");
       socket.on("bericht-data",(data) => {
