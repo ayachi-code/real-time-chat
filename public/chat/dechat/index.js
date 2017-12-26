@@ -85,3 +85,11 @@ socket.on("niet-aan",(data) => {
   goedemorgen.hide();
 
 })
+
+
+
+
+//Als verzenden knop word ingedrukt
+var verzenden_klik_ingedrukt = document.getElementById('verzenden').addEventListener('focus',() => {
+  console.log("ingedrukt");
+});
