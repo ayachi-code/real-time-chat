@@ -10,10 +10,6 @@ function setup() {
       //p tags worden hier geladen
       socket.emit("denaam",naam)
 
-      atypenb =  createP(naam + " is aan het typen").hide();
-
-
-
 }
 
 
@@ -63,9 +59,11 @@ var bericht_input = document.getElementById("bericht").addEventListener('focus',
 
 
 
-//Als aan ontvangt log aan het typen
+//Als aan ontvangt log aan het typen en print het op het scherm als p
 socket.on("aan",(data) => {
+  var goedemorgen = createP(data);
   console.log(data);
-  //atypenb.show();
+  goedemorgen.show();
+
 
 });
