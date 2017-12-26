@@ -23,7 +23,8 @@ io.sockets.on('connection',(socket) => {
 
       });
       socket.on("denaam", (data) => {
-
+            gebruikers.push(data);
+            console.log(gebruikers);
             console.log(data + " is de server gejoint");
             io.emit("gejoint",data)
 
