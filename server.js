@@ -45,6 +45,10 @@ io.sockets.on('connection',(socket) => {
       socket.on("disconnect",() => {
         //console.log(gebruikers);
         console.log(de_naam_gebruiker);
+        var deindex = gebruikers.indexOf(de_naam_gebruiker);
+
+
+
 
       });
 
