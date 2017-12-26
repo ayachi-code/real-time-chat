@@ -47,3 +47,7 @@ socket.on("weg",(weg) => {
   p.style('color: red');
 
 });
+
+
+
+var bericht_input = document.getElementById("bericht");
