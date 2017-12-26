@@ -54,3 +54,12 @@ var bericht_input = document.getElementById("bericht").addEventListener('focus',
   var aan = naam + "is aan het typen";
   socket.emit("aan",aan);
 });
+
+
+
+
+//Als aan ontvangt log aan het typen
+socket.on("aan",(data) => {
+  console.log("aan het typen");
+
+});
