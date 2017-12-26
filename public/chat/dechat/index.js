@@ -43,6 +43,7 @@ socket.on("gejoint",(data) => {
 
 
 socket.on("weg",(weg) => {
-  createP(weg);
+  var p = createP(weg);
+  p.style('color: red');
 
 });
