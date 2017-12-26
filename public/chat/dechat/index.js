@@ -22,10 +22,11 @@ var verzenden = document.getElementById('verzenden').addEventListener('click', (
 
 });
 
-
+//Het bericht
 socket.on("bericht-data", (data) => {
       var uiteindelijke_bericht = data.naam + ": " + data.bericht;
       //console.log(data.naam + ": " + data.bericht);
+      //Het uiteindelijke_bericht word ook groen
       var p = createP(uiteindelijke_bericht);
       p.style('color: green');
 
@@ -35,7 +36,8 @@ socket.on("bericht-data", (data) => {
 
 //De p tag word gemaakt en word begroet tot de server
 socket.on("gejoint",(data) => {
-    createP(data + ": " + " heeft de chat gejoint ")
+    var p = createP(data + ": " + " heeft de chat gejoint ")
+    p.style('color: green');
 });
 
 
