@@ -51,6 +51,11 @@ io.sockets.on('connection',(socket) => {
       });
 
 
+      socket.on("aan",(data) => {
+
+      });
+
+
       //Als gebruiker disconnect
       socket.on("disconnect",() => {
         //console.log(gebruikers);
@@ -65,8 +70,6 @@ io.sockets.on('connection',(socket) => {
         io.emit("weg",weg);
 
       });
-
-
 
 
 
