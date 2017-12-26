@@ -32,7 +32,7 @@ socket.on("bericht-data", (data) => {
 });
 
 
-
+//De p tag word gemaakt en word begroet tot de server
 socket.on("gejoint",(data) => {
     createP(data + ": " + " heeft de chat gejoint ")
 });
