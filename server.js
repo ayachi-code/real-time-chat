@@ -13,6 +13,9 @@ const io = socket(server)
 var gebruikers = [];
 
 
+var de_naam_gebruiker;
+
+
 //Als er een connectie is
 io.sockets.on('connection',(socket) => {
 
@@ -29,6 +32,7 @@ io.sockets.on('connection',(socket) => {
       });
       socket.on("denaam", (data) => {
             //pusht de naam van de gebruiker die online is
+            de_naam_gebruiker = data;
             gebruikers.push(data);
             console.log(gebruikers);
             console.log(data + " is de server gejoint");
@@ -39,6 +43,8 @@ io.sockets.on('connection',(socket) => {
 
       //Als gebruiker disconnect
       socket.on("disconnect",() => {
+        //console.log(gebruikers);
+        console.log(de_naam_gebruiker);
 
       });
 
