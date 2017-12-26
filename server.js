@@ -51,8 +51,10 @@ io.sockets.on('connection',(socket) => {
       });
 
 
+      //Als ik aan ontvang
       socket.on("aan",(data) => {
-
+            console.log(data);
+            io.emit("aan",data);
       });
 
 
