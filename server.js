@@ -46,9 +46,10 @@ io.sockets.on('connection',(socket) => {
         //console.log(gebruikers);
         console.log(de_naam_gebruiker);
         var deindex = gebruikers.indexOf(de_naam_gebruiker);
-
-
-
+        gebruikers.splice(deindex,1);
+        console.log(de_naam_gebruiker + " heeft de chat verlaten... ");
+        var weg = de_naam_gebruiker + " heeft de chat verlaten";
+        io.emit("weg",weg);
 
       });
 

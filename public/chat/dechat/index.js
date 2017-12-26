@@ -36,3 +36,10 @@ socket.on("bericht-data", (data) => {
 socket.on("gejoint",(data) => {
     createP(data + ": " + " heeft de chat gejoint ")
 });
+
+
+
+socket.on("weg",(weg) => {
+  createP(weg);
+
+});
