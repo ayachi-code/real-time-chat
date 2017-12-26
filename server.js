@@ -37,9 +37,9 @@ io.sockets.on('connection',(socket) => {
       });
 
 
-
+      //Als gebruiker disconnect
       socket.on("disconnect",() => {
-        
+
       });
 
 
