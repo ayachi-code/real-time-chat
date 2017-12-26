@@ -37,7 +37,7 @@ socket.on("bericht-data", (data) => {
 //De p tag word gemaakt en word begroet tot de server
 socket.on("gejoint",(data) => {
     var p = createP(data + ": " + " heeft de chat gejoint ")
-    p.style('color: green');
+    p.style('color: blue');
 });
 
 
