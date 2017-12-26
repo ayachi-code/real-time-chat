@@ -6,6 +6,9 @@ var naam = localStorage.getItem("naam");
 var atypenb;
 
 
+var goedemorgen;
+
+
 function setup() {
       //p tags worden hier geladen
       socket.emit("denaam",naam)
@@ -60,14 +63,25 @@ var bericht_input = document.getElementById("bericht").addEventListener('focus',
 
 //Als gene los laat
 var bericht_input_los = document.getElementById('bericht').addEventListener('blur',() => {
-  
+  var niet_aan = "";
+  console.log("laat los");
+  socket.emit("niet-aan",niet_aan)
+
 });
 
 
 //Als aan ontvangt log aan het typen en print het op het scherm als p
 socket.on("aan",(data) => {
-  var goedemorgen = createP(data);
+  goedemorgen = createP(data);
   console.log(data);
   goedemorgen.show();
 
 });
+
+
+//Als gene los laat
+socket.on("niet-aan",(data) => {
+  console.log("laat los");
+  goedemorgen.hide();
+
+})

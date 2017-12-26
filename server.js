@@ -58,6 +58,12 @@ io.sockets.on('connection',(socket) => {
       });
 
 
+
+      socket.on("niet-aan",(data) => {
+          io.emit("niet-aan",data);
+      });
+
+
       //Als gebruiker disconnect
       socket.on("disconnect",() => {
         //console.log(gebruikers);
