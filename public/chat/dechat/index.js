@@ -50,6 +50,6 @@ socket.on("weg",(weg) => {
 
 
 
-var bericht_input = document.getElementById("bericht").addEventListener('onfocus',() => {
-  
+var bericht_input = document.getElementById("bericht").addEventListener('focus',() => {
+  console.log("yay");
 });
