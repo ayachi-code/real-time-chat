@@ -1,10 +1,17 @@
+//Gemaakt door Bilal el ayachi github: https://github.com/ayachi-code/real-time-chat
+
+//Importeert de express module
 const express = require('express');
 const app = express();
 
+
+//Luistert op poort 3000
 const server = app.listen(3000);
 
+//De maap public word gehost
 app.use(express.static('public'));
 
+//importeer socket.io
 const socket = require('socket.io');
 const io = socket(server)
 
@@ -12,11 +19,11 @@ const io = socket(server)
 //Lijst met gebruikers die online zijn
 var gebruikers = [];
 
-
+//Globalen variable de_naam_gebruiker
 var de_naam_gebruiker;
 
 
-//Als er een connectie is
+//Als er een connectie is word er een annoymous calback uitgevoerd en de data word opgeslagen in de variable socket
 io.sockets.on('connection',(socket) => {
 
       //De gebruikers id van de gebruiker
@@ -30,12 +37,15 @@ io.sockets.on('connection',(socket) => {
           io.emit("bericht-data",data);
 
       });
+      //Als ik denaam ontvang word hier onder uit uitgevoerd
       socket.on("denaam", (data) => {
-            //pusht de naam van de gebruiker die online is
+            //de Globalen variable de_naam_gebruiker is gelijk aan data
             de_naam_gebruiker = data;
+            //De naam word gepusht in de lijst
             gebruikers.push(data);
             console.log(gebruikers);
             console.log(data + " is de server gejoint");
+            //gejoint met de variable data word naar de client verstuurt
             io.emit("gejoint",data)
 
       });
@@ -45,10 +55,13 @@ io.sockets.on('connection',(socket) => {
       socket.on("disconnect",() => {
         //console.log(gebruikers);
         console.log(de_naam_gebruiker);
+        //Pakt de index van de gedisconect gebruiker
         var deindex = gebruikers.indexOf(de_naam_gebruiker);
+        //Verwijderd de gebruiker
         gebruikers.splice(deindex,1);
         console.log(de_naam_gebruiker + " heeft de chat verlaten... ");
         var weg = de_naam_gebruiker + " heeft de chat verlaten";
+        //word naar de client verstuurt
         io.emit("weg",weg);
 
       });
