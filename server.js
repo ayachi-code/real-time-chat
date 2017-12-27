@@ -65,7 +65,9 @@ io.sockets.on('connection',(socket) => {
 
       //als ik de-online-gebruikers-lijst ontvang
       socket.on("de-online-gebruikers-lijst",(data) => {
-        console.log(gebruikers);
+        //De gebruiker lijst in string
+        var de_gebruikers_in_string = gebruikers.toString();
+        console.log(de_gebruikers_in_string);
 
       })
 
