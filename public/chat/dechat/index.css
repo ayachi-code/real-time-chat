@@ -35,4 +35,6 @@ body {
   margin-right: 102px;
   width: 100px;
   height: 50px;
+  background-color: lightgreen;
+  color: red;
 }
