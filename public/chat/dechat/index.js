@@ -91,8 +91,8 @@ socket.on("niet-aan",(data) => {
 
 
 //Als online knop word ingedrukt
-var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('mousedown',() => {
-  console.log("ingedrukt");
+var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('dblclick',() => {
+  console.log("dubbel klik");
   de_wie_is_online = createDiv("Dit zijn de online spelers:");
   //Dit is de div die word gemaakt :))))
   de_wie_is_online.style('width', '100px');
@@ -103,10 +103,4 @@ var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('
   de_wie_is_online.style('background-color','darkgray');
   de_wie_is_online.style('margin-bottom','50px');
   de_wie_is_online.style('margin-right','100px');
-});
-
-//Als je online konp los laat
-var online_klik_los = document.getElementById('wie-id').addEventListener('mouseup',() => {
-      console.log("laat los de wie is online ");
-      de_wie_is_online.hide();
 });
