@@ -70,7 +70,8 @@ io.sockets.on('connection',(socket) => {
 
       //als ik de-online-gebruikers-lijst ontvang
       socket.on("de-online-gebruikers-lijst",(data) => {
-        console.log(data);
+        gebruikers_met_naam.push(de_naam_gebruiker);
+        console.log(gebruikers_met_naam);
       })
 
 
