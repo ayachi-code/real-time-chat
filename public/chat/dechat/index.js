@@ -110,5 +110,6 @@ var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('
 } else if (waar != 1) {
   console.log("verdwijn");
   de_wie_is_online.hide();
+  waar = 0;
 }
 });
