@@ -117,3 +117,9 @@ var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('
   waar = 0;
 }
 });
+
+
+//Als ik de-online-gebruikers-lijst
+socket.on("de-online-gebruikers-lijst",(data) => {
+    
+});
