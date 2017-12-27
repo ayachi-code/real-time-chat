@@ -102,6 +102,7 @@ var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('
   de_wie_is_online.style('position','absolute');
   de_wie_is_online.style('background-color','darkgray');
   de_wie_is_online.style('margin-bottom','50px');
+  de_wie_is_online.style('margin-right','100px');
 });
 
 //Als je online konp los laat
