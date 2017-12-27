@@ -8,6 +8,7 @@ var atypenb;
 
 var goedemorgen;
 
+var de_wie_is_online;
 
 function setup() {
       //p tags worden hier geladen
@@ -92,7 +93,7 @@ socket.on("niet-aan",(data) => {
 //Als verzenden knop word ingedrukt
 var verzenden_klik_ingedrukt = document.getElementById('verzenden').addEventListener('mousedown',() => {
   console.log("ingedrukt");
-  var de_wie_is_online = createDiv("ik ben coll");
+  de_wie_is_online = createDiv("ik ben coll");
   //Dit is de div die word gemaakt :))))
   de_wie_is_online.style('width', '100px');
   de_wie_is_online.style('height', '100px');
@@ -104,6 +105,6 @@ var verzenden_klik_ingedrukt = document.getElementById('verzenden').addEventList
 });
 
 //Als je verzenden los laat
-var verzenden_klik_los = document.getElementById('verzenden').addEventListener('mousedown',() => {
-
+var verzenden_klik_los = document.getElementById('verzenden').addEventListener('mouseup',() => {
+      console.log("laat los");
 });
