@@ -68,6 +68,8 @@ io.sockets.on('connection',(socket) => {
         //De gebruiker lijst in string
         var de_gebruikers_in_string = gebruikers.toString();
         console.log(de_gebruikers_in_string);
+        //Word verstuurt naar client
+        io.emit("de-online-gebruikers-lijst",de_gebruikers_in_string);
 
       })
 
