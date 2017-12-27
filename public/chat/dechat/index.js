@@ -103,8 +103,8 @@ var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('
   //Maakt een div
   de_wie_is_online = createDiv("Dit zijn de online spelers:");
   //Dit is de div die word gemaakt :))))
-  de_wie_is_online.style('width', '100px');
-  de_wie_is_online.style('height', '100px');
+  de_wie_is_online.style('width', '250px');
+  de_wie_is_online.style('height', '250px');
   de_wie_is_online.style('bottom', '0');
   de_wie_is_online.style('right','0');
   de_wie_is_online.style('position','absolute');
