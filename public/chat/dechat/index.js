@@ -93,8 +93,9 @@ socket.on("niet-aan",(data) => {
 
 
 //Als online knop word ingedrukt
-var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('dblclick',() => {
-  console.log("dubbel klik");
+var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('click',() => {
+  waar += 1;
+  console.log("dubbel klik " + waar);
   de_wie_is_online = createDiv("Dit zijn de online spelers:");
   //Dit is de div die word gemaakt :))))
   de_wie_is_online.style('width', '100px');
