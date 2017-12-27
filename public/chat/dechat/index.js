@@ -10,6 +10,8 @@ var goedemorgen;
 
 var de_wie_is_online;
 
+var waar;
+
 function setup() {
       //p tags worden hier geladen
       socket.emit("denaam",naam)
