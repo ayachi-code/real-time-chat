@@ -121,7 +121,10 @@ var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('
 
 //Als ik de-online-gebruikers-lijst
 socket.on("de-online-gebruikers-lijst",(data) => {
+  //print alle data 1 voor 1
   for (var i = 0; i < data.length; i++) {
+    var de_gebruikers_in_p = createP(data[i]);
+    de_wie_is_online.child(de_gebruikers_in_p);
     console.log(data[i])
   }
 
