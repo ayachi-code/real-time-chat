@@ -97,5 +97,8 @@ var verzenden_klik_ingedrukt = document.getElementById('verzenden').addEventList
   de_wie_is_online.style('width', '100px');
   de_wie_is_online.style('height', '100px');
   de_wie_is_online.style('bottom', '0');
+  de_wie_is_online.style('right','0');
   de_wie_is_online.style('position','absolute');
+  de_wie_is_online.style('background-color','darkgray');
+  de_wie_is_online.style('margin-bottom','50px');
 });
