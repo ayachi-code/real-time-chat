@@ -106,5 +106,6 @@ var verzenden_klik_ingedrukt = document.getElementById('verzenden').addEventList
 
 //Als je verzenden los laat
 var verzenden_klik_los = document.getElementById('verzenden').addEventListener('mouseup',() => {
-      console.log("laat los");
+      console.log("laat los de wie is online ");
+      de_wie_is_online.hide();
 });
