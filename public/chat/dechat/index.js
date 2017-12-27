@@ -93,7 +93,7 @@ socket.on("niet-aan",(data) => {
 //Als verzenden knop word ingedrukt
 var verzenden_klik_ingedrukt = document.getElementById('verzenden').addEventListener('mousedown',() => {
   console.log("ingedrukt");
-  de_wie_is_online = createDiv("ik ben coll");
+  de_wie_is_online = createDiv("Dit zijn de online spelers:");
   //Dit is de div die word gemaakt :))))
   de_wie_is_online.style('width', '100px');
   de_wie_is_online.style('height', '100px');
