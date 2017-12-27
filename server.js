@@ -63,6 +63,11 @@ io.sockets.on('connection',(socket) => {
           io.emit("niet-aan",data);
       });
 
+      //als ik de-online-gebruikers-lijst ontvang
+      socket.on("de-online-gebruikers-lijst",(data) => {
+            console.log(data);
+      })
+
 
       //Als gebruiker disconnect
       socket.on("disconnect",() => {

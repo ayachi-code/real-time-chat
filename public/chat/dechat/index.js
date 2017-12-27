@@ -97,6 +97,10 @@ var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('
   waar += 1;
   console.log(waar);
   if (waar == 1) {
+  //Word verstuurt naar server...
+  var de_gebruikers = "Dit zijn de online gebruikers: ";
+  socket.on("de-online-gebruikers-lijst",de_gebruikers);
+  //Maakt een div
   de_wie_is_online = createDiv("Dit zijn de online spelers:");
   //Dit is de div die word gemaakt :))))
   de_wie_is_online.style('width', '100px');
