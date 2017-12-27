@@ -121,5 +121,5 @@ var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('
 
 //Als ik de-online-gebruikers-lijst
 socket.on("de-online-gebruikers-lijst",(data) => {
-    
+    console.log(data);
 });
