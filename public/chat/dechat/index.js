@@ -9,6 +9,8 @@ var atypenb;
 var goedemorgen;
 
 
+var indruk = 0;
+
 function setup() {
       //p tags worden hier geladen
       socket.emit("denaam",naam)
@@ -90,7 +92,8 @@ socket.on("niet-aan",(data) => {
 
 
 //Als verzenden knop word ingedrukt
-var verzenden_klik_ingedrukt = document.getElementById('verzenden').addEventListener('focus',() => {
+var verzenden_klik_ingedrukt = document.getElementById('verzenden').addEventListener('mousedown',() => {
+
   console.log("ingedrukt");
   var de_wie_is_online = createDiv("ik ben coll");
   //Dit is de div die word gemaakt :))))
