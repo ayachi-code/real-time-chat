@@ -58,7 +58,7 @@ io.sockets.on('connection',(socket) => {
       });
 
 
-
+      //Als ik niet aan ontvang
       socket.on("niet-aan",(data) => {
           io.emit("niet-aan",data);
       });
