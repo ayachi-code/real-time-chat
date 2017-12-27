@@ -91,7 +91,7 @@ socket.on("niet-aan",(data) => {
 
 
 //Als verzenden knop word ingedrukt
-var verzenden_klik_ingedrukt = document.getElementById('verzenden').addEventListener('mousedown',() => {
+var verzenden_klik_ingedrukt = document.getElementById('wie-id').addEventListener('mousedown',() => {
   console.log("ingedrukt");
   de_wie_is_online = createDiv("Dit zijn de online spelers:");
   //Dit is de div die word gemaakt :))))
@@ -105,7 +105,7 @@ var verzenden_klik_ingedrukt = document.getElementById('verzenden').addEventList
 });
 
 //Als je verzenden los laat
-var verzenden_klik_los = document.getElementById('verzenden').addEventListener('mouseup',() => {
+var verzenden_klik_los = document.getElementById('wie-id').addEventListener('mouseup',() => {
       console.log("laat los de wie is online ");
       de_wie_is_online.hide();
 });
