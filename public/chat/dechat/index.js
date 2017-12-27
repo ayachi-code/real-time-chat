@@ -10,7 +10,7 @@ var goedemorgen;
 
 var de_wie_is_online;
 
-var waar;
+var waar = 0;
 
 function setup() {
       //p tags worden hier geladen
