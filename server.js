@@ -23,6 +23,11 @@ var gebruikers = [];
 var de_naam_gebruiker;
 
 
+//Hier komen de gebruikers in met hun gebruikers naam
+var gebruikers_met_naam = [];
+
+
+
 //Als er een connectie is word er een annoymous calback uitgevoerd en de data word opgeslagen in de variable socket
 io.sockets.on('connection',(socket) => {
 
@@ -65,7 +70,7 @@ io.sockets.on('connection',(socket) => {
 
       //als ik de-online-gebruikers-lijst ontvang
       socket.on("de-online-gebruikers-lijst",(data) => {
-            console.log(data);
+        console.log(data);
       })
 
 
