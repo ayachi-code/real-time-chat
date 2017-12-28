@@ -123,8 +123,8 @@ var online_klik_ingedrukt = document.getElementById('wie-id').addEventListener('
 socket.on("de-online-gebruikers-lijst",(data) => {
   //print alle data 1 voor 1 in de div
   for (var i = 0; i < data.length; i++) {
-    var de_gebruikers_in_p = createP("Gebruiler: " + data[i] + " is online");
-    de_wie_is_online.child(de_gebruikers_in_p);
+    //var de_gebruikers_in_p = createP("Gebruiler: " + data[i] + " is online");
+    de_wie_is_online.child(createP("Gebruiler: " + data[i] + " is online"));
     console.log(data[i])
   }
 
