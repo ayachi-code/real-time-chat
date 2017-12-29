@@ -5,13 +5,17 @@ var naam = localStorage.getItem("naam");
 
 var atypenb;
 
-
+//Het verschijnen van aan het typen
 var goedemorgen;
 
+
+//Hoort bij de div van wie is online
 var de_wie_is_online;
 
+//Hoort bij het kijken van wanneer de div moet Verwijderen
 var waar = 0;
 
+//Hoort bij de bericht
 var pas;
 
 function setup() {
