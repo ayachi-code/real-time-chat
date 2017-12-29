@@ -12,6 +12,8 @@ var de_wie_is_online;
 
 var waar = 0;
 
+var pas;
+
 function setup() {
       //p tags worden hier geladen
       socket.emit("denaam",naam)
@@ -27,6 +29,7 @@ var verzenden = document.getElementById('verzenden').addEventListener('click', (
   }
 
   socket.emit("bericht-data",data);
+  socket.emit("ik");
 
 });
 
@@ -35,8 +38,8 @@ socket.on("bericht-data", (data) => {
       var uiteindelijke_bericht = data.naam + ": " + data.bericht;
       //console.log(data.naam + ": " + data.bericht);
       //Het uiteindelijke_bericht word ook groen
-      var p = createP(uiteindelijke_bericht);
-      p.style('color: green');
+      pas = createP(uiteindelijke_bericht);
+      pas.style('color: green');
 
 
 });
@@ -128,4 +131,9 @@ socket.on("de-online-gebruikers-lijst",(data) => {
     console.log(data[i])
   }
 
+});
+
+
+socket.on("ik",() => {
+  pas.style("color","red");
 });

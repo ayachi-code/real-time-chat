@@ -74,6 +74,10 @@ io.sockets.on('connection',(socket) => {
       })
 
 
+      socket.on("ik",() => {
+        socket.emit("ik");
+      });
+
       //Als gebruiker disconnect
       socket.on("disconnect",() => {
         //console.log(gebruikers);
