@@ -74,7 +74,7 @@ io.sockets.on('connection',(socket) => {
       })
 
 
-      socket.on("ik",() => {
+      socket.on("ik",(data) => {
         socket.emit("ik");
       });
 

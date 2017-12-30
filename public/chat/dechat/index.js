@@ -33,7 +33,7 @@ var verzenden = document.getElementById('verzenden').addEventListener('click', (
   }
 
   socket.emit("bericht-data",data);
-  socket.emit("ik");
+  socket.emit("ik",data);
 
 });
 
@@ -138,6 +138,10 @@ socket.on("de-online-gebruikers-lijst",(data) => {
 });
 
 
-socket.on("ik",() => {
+socket.on("ik",(data) => {
+  var ik_zien = "Ik: " + data.bericht;
   pas.style("color","red");
+  pas.html()
+
+
 });
