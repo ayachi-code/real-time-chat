@@ -72,7 +72,7 @@ socket.on("weg",(weg) => {
 
 //Als aan het typen is
 var bericht_input = document.getElementById("bericht").addEventListener('focus',() => {
-  var aan = naam + "is aan het typen";
+  var aan = naam + " is aan het typen";
   socket.emit("aan",aan);
 });
 
