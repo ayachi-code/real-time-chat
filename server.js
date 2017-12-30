@@ -78,6 +78,12 @@ io.sockets.on('connection',(socket) => {
         socket.emit("ik",data);
       });
 
+
+      socket.on("ik_gejoint",() => {
+        socket.emit("ik_gejoint");
+      });
+
+
       //Als gebruiker disconnect
       socket.on("disconnect",() => {
         //console.log(gebruikers);

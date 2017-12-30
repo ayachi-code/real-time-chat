@@ -20,12 +20,13 @@ var pas;
 
 function setup() {
       //p tags worden hier geladen
+      socket.emit("ik_gejoint");
       socket.emit("denaam",naam)
 
 }
 
 
-
+//Als iemand een bericht verzend
 var verzenden = document.getElementById('verzenden').addEventListener('click', () => {
   var data = {
     bericht: document.getElementById('bericht').value,
@@ -144,4 +145,8 @@ socket.on("ik",(data) => {
   pas.html(ik_zien)
 
 
+});
+
+socket.on("ik_gejoint",() => {
+  
 });
