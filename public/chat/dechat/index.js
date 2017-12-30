@@ -18,10 +18,14 @@ var waar = 0;
 //Hoort bij de bericht
 var pas;
 
+//Hoort bij gejoint
+var plat;
+
 function setup() {
       //p tags worden hier geladen
+      socket.emit("denaam",naam);
       socket.emit("ik_gejoint");
-      socket.emit("denaam",naam)
+
 
 }
 
@@ -52,8 +56,8 @@ socket.on("bericht-data", (data) => {
 
 //De p tag word gemaakt en word begroet tot de server
 socket.on("gejoint",(data) => {
-    var p = createP(data + ": " + " heeft de chat gejoint ")
-    p.style('color: blue');
+    plat = createP(data + ": " + " heeft de chat gejoint ")
+    plat.style('color: blue');
 });
 
 
@@ -148,5 +152,6 @@ socket.on("ik",(data) => {
 });
 
 socket.on("ik_gejoint",() => {
-  
+  var ik_gejointe = "Ik heb de chat gejoint";
+  plat.html(ik_gejointe);
 });
