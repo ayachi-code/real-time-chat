@@ -36,6 +36,7 @@ var verzenden = document.getElementById('verzenden').addEventListener('click', (
     bericht: document.getElementById('bericht').value,
     naam: localStorage.getItem("naam")
   }
+  data.bericht = data.bericht.replace('<',"''");
 
   socket.emit("bericht-data",data);
   socket.emit("ik",data);
