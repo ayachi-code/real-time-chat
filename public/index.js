@@ -4,7 +4,7 @@ var knop_doe_mee = document.getElementById('doe_mee').addEventListener('click', 
     localStorage.setItem("naam",naam_gebruiker)
     window.open("/chat/index.html");
   } else {
-    alert("Type je naam...")
+    document.getElementById('waarschuwing').innerHTML = "Type een naam...";
   }
 
 });
