@@ -3,3 +3,5 @@ var knop_doe_mee = document.getElementById('doe_mee').addEventListener('click', 
   localStorage.setItem("naam",naam_gebruiker)
   window.open("/chat/index.html");
 });
+
+var naam = document.getElementById('naam').value;
