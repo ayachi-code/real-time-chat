@@ -75,7 +75,7 @@ io.sockets.on('connection',(socket) => {
 
 
       socket.on("ik",(data) => {
-        socket.emit("ik");
+        socket.emit("ik",data);
       });
 
       //Als gebruiker disconnect
