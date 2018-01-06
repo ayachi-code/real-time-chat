@@ -59,7 +59,8 @@ nav {
 
 
 #register {
-  background-color: lightblue;
-  width: 40px;
+  background-color: rgb(77, 101, 141);
+  width: 200px;
   height: 100%;
+  color: white;
 }
