@@ -16,3 +16,17 @@ nav {
   height: 100%;
   color: white;
 }
+
+
+.register {
+  height: 250px;
+  width: 190px;
+  background-color: rgb(118, 137, 169);
+}
+
+.welkom {
+  width: 100%;
+  height: 50px;
+  background-color: darkblue;
+  color: white;
+}
