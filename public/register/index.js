@@ -12,4 +12,5 @@ var registereren = document.getElementById('klas2vh3').addEventListener('click',
     wachtwoord2: document.getElementById('inyp4').value
   }
 
+  socket.emit('register-gegevens',data);
 });
