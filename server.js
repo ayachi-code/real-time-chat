@@ -83,6 +83,9 @@ io.sockets.on('connection',(socket) => {
         socket.emit("ik_gejoint");
       });
 
+      socket.on("register-gegevens",(data) => {
+
+      });
 
       //Als gebruiker disconnect
       socket.on("disconnect",() => {
