@@ -4,6 +4,8 @@
 const express = require('express');
 const app = express();
 
+//Mysql importeerem
+const mysql = require('mysql');
 
 //Luistert op poort 3000
 const server = app.listen(3000);
@@ -83,6 +85,7 @@ io.sockets.on('connection',(socket) => {
         socket.emit("ik_gejoint");
       });
 
+      //Als ik register-gegevens ontvang
       socket.on("register-gegevens",(data) => {
 
       });
