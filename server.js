@@ -24,6 +24,13 @@ var gebruikers = [];
 //Globalen variable de_naam_gebruiker
 var de_naam_gebruiker;
 
+//Conecteer database
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "almujaahid/0",
+  database: "chat-bilal"
+});
 
 //Als er een connectie is word er een annoymous calback uitgevoerd en de data word opgeslagen in de variable socket
 io.sockets.on('connection',(socket) => {
