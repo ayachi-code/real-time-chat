@@ -8,4 +8,8 @@ var inloggen = document.getElementById('inloggen').addEventListener('click',() =
     naam: document.getElementById('gebruikersnaam').value,
     wachtwoord: ocument.getElementById('wachtwoord').value
 }
+
+
+socket.emit("inloggen",data);
+
 });
