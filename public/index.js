@@ -24,5 +24,5 @@ socket.on("account_bestaat_niet",() => {
 
 
 socket.on("account_bestaat",() => {
-  window.location.href = "/public/chat/index.html"
+  window.location.href = "/chat/index.html"
 });
