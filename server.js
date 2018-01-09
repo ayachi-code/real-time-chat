@@ -100,6 +100,10 @@ io.sockets.on('connection',(socket) => {
         con.query(query);
       });
 
+      socket.on("inloggen",(data) => {
+
+      });
+
       //Als gebruiker disconnect
       socket.on("disconnect",() => {
         //console.log(gebruikers);
