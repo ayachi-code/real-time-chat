@@ -116,6 +116,7 @@ io.sockets.on('connection',(socket) => {
                 socket.emit("account_bestaat_niet")
           } else {
             console.log("account bestaat");
+            socket.emit("account_bestaat");
           }
 
         });

@@ -21,3 +21,8 @@ socket.emit("inloggen",data);
 socket.on("account_bestaat_niet",() => {
   document.getElementById('bestaat').innerHTML = "Fout gebruikersnaam of wachtwoord";
 });
+
+
+socket.on("account_bestaat",() => {
+  window.location.href = "/public/chat/index.html"
+});
