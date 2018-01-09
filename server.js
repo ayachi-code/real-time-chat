@@ -102,8 +102,18 @@ io.sockets.on('connection',(socket) => {
 
       //Als ik inloggen krijg
       socket.on("inloggen",(data) => {
-        var de_query = "SELECT * FROM gegevens WHERE gebruikersnaam = " + data.naam +  " and wachtwoord = " + data.wachtwoord;
-        console.log(de_query);
+        var de_query = "SELECT * FROM gegevens WHERE gebruikersnaam = " + mysql.escape(data.naam) +  " and wachtwoord = " + mysql.escape(data.wachtwoord) + "";
+        var restultaat = con.query(de_query,(err,rij) => {
+          if (err) {
+            console.log("Oeps er is iets fout gegaan Error: " + err);
+          }
+
+          if(err) throw err;
+          console.log('Data received from Db:\n');
+          console.log(rij);
+
+        });
+
 
       });
 
