@@ -8,7 +8,7 @@ var geregistreerd = document.getElementById('register').addEventListener('click'
 var inloggen = document.getElementById('inloggen').addEventListener('click',() => {
   var data = {
     naam: document.getElementById('gebruikersnaam').value,
-    wachtwoord: ocument.getElementById('wachtwoord').value
+    wachtwoord: document.getElementById('wachtwoord').value
 }
 
 

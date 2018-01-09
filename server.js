@@ -102,7 +102,7 @@ io.sockets.on('connection',(socket) => {
 
       //Als ik inloggen krijg
       socket.on("inloggen",(data) => {
-        var de_query = "SELECT * FROM gegevens WHERE gebruikersnaam =" + data.naam +  "and wachtwoord =" + data.wachtwoord;
+        var de_query = "SELECT * FROM gegevens WHERE gebruikersnaam = " + data.naam +  " and wachtwoord = " + data.wachtwoord;
         console.log(de_query);
 
       });
