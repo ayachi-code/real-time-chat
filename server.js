@@ -115,8 +115,9 @@ io.sockets.on('connection',(socket) => {
                 console.log("account bestaat niet");
                 socket.emit("account_bestaat_niet")
           } else {
+            var de_gebruiersnaam = rij[0].gebruikersnaam;
             console.log("account bestaat");
-            socket.emit("account_bestaat");
+            socket.emit("account_bestaat",de_gebruiersnaam);
           }
 
         });
