@@ -94,8 +94,8 @@ io.sockets.on('connection',(socket) => {
 
       //Als ik register-gegevens ontvang
       socket.on("register-gegevens",(data) => {
-        var sql_registreer = "INSERT INTO gegevens(email, gebruikersnaam, wachtwoord) VALUES('hey','a',zas)"
-        mysql.query(sql_registreer);
+        var query = "INSERT INTO gegevens(email, gebruikersnaam, wachtwoord) VALUES(" + data.naam + "," + data.email + "," + data.wachtwoord + ")";
+        console.log(query);
       });
 
       //Als gebruiker disconnect
