@@ -15,4 +15,7 @@ var registereren = document.getElementById('klas2vh3').addEventListener('click',
   }
 
   socket.emit('register-gegevens',data);
+
+  alert("account is gemaakt")
+
 });
