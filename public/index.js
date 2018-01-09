@@ -15,3 +15,9 @@ var inloggen = document.getElementById('inloggen').addEventListener('click',() =
 socket.emit("inloggen",data);
 
 });
+
+
+
+socket.on("account_bestaat_niet",() => {
+  document.getElementById('bestaat').innerHTML = "Fout gebruikersnaam of wachtwoord";
+});

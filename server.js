@@ -113,6 +113,7 @@ io.sockets.on('connection',(socket) => {
 
           if (rij.length <= 0) {
                 console.log("account bestaat niet");
+                socket.emit("account_bestaat_niet")
           } else {
             console.log("account bestaat");
           }
