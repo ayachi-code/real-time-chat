@@ -109,8 +109,13 @@ io.sockets.on('connection',(socket) => {
           }
 
           if(err) throw err;
-          console.log('Data received from Db:\n');
-          console.log(rij);
+          console.log('succues')
+
+          if (rij.length <= 0) {
+                console.log("account bestaat niet");
+          } else {
+            console.log("account bestaat");
+          }
 
         });
 
