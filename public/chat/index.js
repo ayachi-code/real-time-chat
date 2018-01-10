@@ -15,4 +15,10 @@ var online_knop = document.getElementById("online").addEventListener('click',() 
   window.location.href = "/chat/wieisonline/"
 });
 
+//Verstuut hoe heet ik
 socket.emit("hoe-heet-ik");
+
+//ontvang hoe-heet-ik
+socket.on("hoe-heet-ik",(data) => {
+
+})
