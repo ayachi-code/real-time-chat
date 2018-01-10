@@ -14,3 +14,5 @@ var chat_knop = document.getElementById('chat_nu').addEventListener('click',() =
 var online_knop = document.getElementById("online").addEventListener('click',() => {
   window.location.href = "/chat/wieisonline/"
 });
+
+socket.emit("hoe-heet-ik");
