@@ -128,8 +128,9 @@ io.sockets.on('connection',(socket) => {
 
       });
 
+      //Als ik hoe-heet-ik krijg
       socket.on("hoe-heet-ik",() => {
-
+        socket.emit("hoe-heet-ik",de_gebruiersnaam);
       });
 
       //Als gebruiker disconnect
