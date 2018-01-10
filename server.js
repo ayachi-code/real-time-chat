@@ -133,6 +133,11 @@ io.sockets.on('connection',(socket) => {
         socket.emit("hoe-heet-ik",de_gebruiersnaam);
       });
 
+      socket.on("wie-ben-ik-id",() => {
+        console.log(de_gebruiersnaam);
+        socket.emit("wie-ben-ik-id",de_gebruiersnaam)
+      })
+
       //Als gebruiker disconnect
       socket.on("disconnect",() => {
         //console.log(gebruikers);

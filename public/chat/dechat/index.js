@@ -1,13 +1,12 @@
 var socket = io();
 
-var naam = localStorage.getItem("naam");
-
-
 var atypenb;
 
 //Het verschijnen van aan het typen
 var goedemorgen;
 
+//Naam
+var naam;
 
 //Hoort bij de div van wie is online
 var de_wie_is_online;
@@ -22,6 +21,14 @@ var pas;
 var plat;
 
 function setup() {
+
+      socket.emit("wie-ben-ik-id");
+
+      socket.on("wie-ben-ik-id",(data) => {
+        naam = data;
+        console.log(naam);
+      })
+
       //p tags worden hier geladen
       socket.emit("denaam",naam);
       socket.emit("ik_gejoint");
@@ -34,7 +41,7 @@ function setup() {
 var verzenden = document.getElementById('verzenden').addEventListener('click', () => {
   var data = {
     bericht: document.getElementById('bericht').value,
-    naam: localStorage.getItem("naam")
+    naam: naam
   }
   data.bericht = data.bericht.replace('<',"''");
 
