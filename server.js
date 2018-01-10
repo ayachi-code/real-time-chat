@@ -24,6 +24,9 @@ var gebruikers = [];
 //Globalen variable de_naam_gebruiker
 var de_naam_gebruiker;
 
+//de_naam_gebruiker
+var de_gebruiersnaam;
+
 //Conecteer database
 var con = mysql.createConnection({
   host: "localhost",
@@ -115,13 +118,17 @@ io.sockets.on('connection',(socket) => {
                 console.log("account bestaat niet");
                 socket.emit("account_bestaat_niet")
           } else {
-            var de_gebruiersnaam = rij[0].gebruikersnaam;
+            de_gebruiersnaam = rij[0].gebruikersnaam;
             console.log("account bestaat");
             socket.emit("account_bestaat",de_gebruiersnaam);
           }
 
         });
 
+
+      });
+
+      socket.on("hoe-heet-ik",() => {
 
       });
 
