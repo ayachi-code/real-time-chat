@@ -7,8 +7,8 @@ const app = express();
 //Mysql importeerem
 const mysql = require('mysql');
 
-//Luistert op poort 3000
-const server = app.listen(3000);
+//Luistert op poort 80
+const server = app.listen(80);
 
 //De maap public word gehost
 app.use(express.static('public'));
@@ -31,8 +31,8 @@ var de_gebruiersnaam;
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "almujaahid/0",
-  database: "chat-bilal"
+  password: "bilal",
+  database: "chat"
 });
 
 //Als er een connectie is word er een annoymous calback uitgevoerd en de data word opgeslagen in de variable socket
