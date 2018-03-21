@@ -210,7 +210,7 @@ var prive = document.getElementById("prive-chat-nu").addEventListener('click',()
 })
 
 socket.on("prive-lijst-vragen",(data) => {
-  for(var i = 0; i <= data.length;i++) {
-    console.log(data[i])
+  for(var i = 0; i < data.length;i++) {
+    console.log(data[0])
   }
 });
