@@ -182,3 +182,8 @@ var input_berichte = document.getElementById("bericht").addEventListener("keypre
     document.getElementById("bericht").value = "";
   }
 });
+
+//Event listener van prive chat nu gemaakt
+var prive = document.getElementById("prive-chat-nu").addEventListener('click',() => {
+  console.log("prive chat word geopend");
+})
