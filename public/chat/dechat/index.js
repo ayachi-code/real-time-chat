@@ -211,6 +211,7 @@ var prive = document.getElementById("prive-chat-nu").addEventListener('click',()
 
 socket.on("prive-lijst-vragen",(data) => {
   for(var i = 0; i < data.length;i++) {
-    console.log(data[0])
+    //De online gebruiker word gedisplayed
+    prive_doen.child(createP("Gebruiler: " + data[i]));
   }
 });
