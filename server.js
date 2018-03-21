@@ -82,6 +82,11 @@ io.sockets.on('connection',(socket) => {
       socket.on("ik_gejoint",() => {
         socket.emit("ik_gejoint");
       });
+      
+      //Als ik prive-lijst-vragen ontvang
+      socket.on("prive-lijst-vragen",() => {
+        
+      });
 
 
       //Als gebruiker disconnect
