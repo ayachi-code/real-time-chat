@@ -21,6 +21,15 @@ var pas;
 //Hoort bij gejoint
 var plat;
 
+
+//De input event keypess
+var input_berichte = document.getElementById("bericht").addEventListener("keypress",(e) => {
+  //Als iemand op enter klikt event
+  if (e.keyCode == "13") {
+      console.log("enter")
+  }
+});
+
 function setup() {
       //p tags worden hier geladen
       socket.emit("denaam",naam);
