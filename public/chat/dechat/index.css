@@ -42,7 +42,7 @@ body {
 #prive-chat-nu {
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
   margin-right: 204px;
   width: 100px;
   height: 50px;
