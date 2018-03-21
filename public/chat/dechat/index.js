@@ -22,14 +22,6 @@ var pas;
 var plat;
 
 
-//De input event keypess
-var input_berichte = document.getElementById("bericht").addEventListener("keypress",(e) => {
-  //Als iemand op enter klikt event
-  if (e.keyCode == "13") {
-      console.log("enter")
-  }
-});
-
 function setup() {
       //p tags worden hier geladen
       socket.emit("denaam",naam);
@@ -164,4 +156,13 @@ socket.on("ik",(data) => {
 socket.on("ik_gejoint",() => {
   var ik_gejointe = "Ik heb de chat gejoint";
   plat.html(ik_gejointe);
+});
+
+
+//De input event keypess
+var input_berichte = document.getElementById("bericht").addEventListener("keypress",(e) => {
+  //Als iemand op enter klikt event
+  if (e.keyCode == "13") {
+      console.log("enter")
+  }
 });
