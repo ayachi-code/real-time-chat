@@ -216,7 +216,7 @@ socket.on("prive-lijst-vragen",(data) => {
 
     var br = document.createElement("br");
     var p_prive_box_a = document.createElement("p");
-    var p_prive_box_a_text = document.createTextNode(data[i]);
+    var p_prive_box_a_text = document.createTextNode("Gebruiker: " + data[i]);
 
 
 
