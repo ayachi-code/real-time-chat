@@ -21,6 +21,9 @@ var pas;
 //Hoort bij gejoint
 var plat;
 
+//De prive_doen var
+var prive_doen;
+
 
 function setup() {
       //p tags worden hier geladen
@@ -185,14 +188,21 @@ var input_berichte = document.getElementById("bericht").addEventListener("keypre
 
 //Event listener van prive chat nu gemaakt
 var prive = document.getElementById("prive-chat-nu").addEventListener('click',() => {
+  waar += 1;
   console.log("prive chat word geopend");
-  de_wie_is_online = createDiv("prive chat starten");
-  //Dit is de div die word gemaakt :))))
-  de_wie_is_online.style('width', '250px');
-  de_wie_is_online.style('height', '250px');
-  de_wie_is_online.style('bottom', '0');
-  de_wie_is_online.style('left','0');
-  de_wie_is_online.style('position','absolute');
-  de_wie_is_online.style('background-color','darkgray');
-  de_wie_is_online.style('margin-bottom','50px');
+  if (waar == 1) {
+    prive_doen = createDiv("prive chat starten");
+    //Dit is de div die word gemaakt :))))
+    prive_doen.style('width', '250px');
+    prive_doen.style('height', '250px');
+    prive_doen.style('bottom', '0');
+    prive_doen.style('left','0');
+    prive_doen.style('position','absolute');
+    prive_doen.style('background-color','darkgray');
+    prive_doen.style('margin-bottom','50px');
+  } else if(waar != 1) {
+    prive_doen.hide();
+    waar = 0;
+  }
+ 
 })
