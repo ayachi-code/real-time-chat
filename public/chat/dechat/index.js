@@ -214,15 +214,20 @@ socket.on("prive-lijst-vragen",(data) => {
     prive_box_a = document.getElementById("prive_box");
     //P word gemaakt
 
+    var knop_aanvraag = document.createElement("button");
     var br = document.createElement("br");
     var p_prive_box_a = document.createElement("p");
+
+
     var p_prive_box_a_text = document.createTextNode("Gebruiker: " + data[i]);
+    var knop_aanvraag_text = document.createTextNode("Prive aanvraag");
 
+    
 
-
+    knop_aanvraag.appendChild(knop_aanvraag_text);
     prive_box_a.appendChild(p_prive_box_a_text)
     prive_box_a.appendChild(br);
+    prive_box_a.appendChild(knop_aanvraag)
 
-    //De knop makee
   }
 });
