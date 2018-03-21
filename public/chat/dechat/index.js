@@ -163,6 +163,16 @@ socket.on("ik_gejoint",() => {
 var input_berichte = document.getElementById("bericht").addEventListener("keypress",(e) => {
   //Als iemand op enter klikt event
   if (e.keyCode == "13") {
-      console.log("enter")
+    //Data van de input en die verzonden moet worden
+    var data = {
+      bericht: document.getElementById('bericht').value,
+      naam: localStorage.getItem("naam")
+    }
+    //Prepare xxs aanval
+    data.bericht = data.bericht.replace('<',"''");
+  
+    //Naar server verzonden
+    socket.emit("bericht-data",data);
+    socket.emit("ik",data);
   }
 });
