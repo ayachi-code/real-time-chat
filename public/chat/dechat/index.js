@@ -190,6 +190,7 @@ var input_berichte = document.getElementById("bericht").addEventListener("keypre
 var prive = document.getElementById("prive-chat-nu").addEventListener('click',() => {
   waar += 1;
   console.log("prive chat word geopend");
+  socket.emit("prive-lijst-vragen");
   if (waar == 1) {
     prive_doen = createDiv("prive chat starten");
     //Dit is de div die word gemaakt :))))
@@ -201,6 +202,7 @@ var prive = document.getElementById("prive-chat-nu").addEventListener('click',()
     prive_doen.style('background-color','darkgray');
     prive_doen.style('margin-bottom','50px');
   } else if(waar != 1) {
+    console.log("prive chat word verwijnd");
     prive_doen.hide();
     waar = 0;
   }
