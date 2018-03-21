@@ -41,6 +41,7 @@ var verzenden = document.getElementById('verzenden').addEventListener('click', (
 
   socket.emit("bericht-data",data);
   socket.emit("ik",data);
+  document.getElementById("bericht").value = "";
 
 });
 
@@ -159,6 +160,8 @@ socket.on("ik_gejoint",() => {
 });
 
 
+
+
 //De input event keypess
 var input_berichte = document.getElementById("bericht").addEventListener("keypress",(e) => {
   //Als iemand op enter klikt event
@@ -174,5 +177,6 @@ var input_berichte = document.getElementById("bericht").addEventListener("keypre
     //Naar server verzonden
     socket.emit("bericht-data",data);
     socket.emit("ik",data);
+    document.getElementById("bericht").value = "";
   }
 });
