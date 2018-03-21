@@ -190,8 +190,8 @@ var input_berichte = document.getElementById("bericht").addEventListener("keypre
 var prive = document.getElementById("prive-chat-nu").addEventListener('click',() => {
   waar += 1;
   console.log("prive chat word geopend");
-  socket.emit("prive-lijst-vragen");
   if (waar == 1) {
+    socket.emit("prive-lijst-vragen");
     prive_doen = createDiv("prive chat starten");
     //Dit is de div die word gemaakt :))))
     prive_doen.style('width', '250px');
