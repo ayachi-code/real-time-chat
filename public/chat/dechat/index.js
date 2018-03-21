@@ -231,5 +231,11 @@ socket.on("prive-lijst-vragen",(data) => {
     prive_box_a.appendChild(br);
     prive_box_a.appendChild(br);
 
+
+    //Event listener voor als je op klik klikt
+    knop_aanvraag.addEventListener('click',() => {
+      console.log('hey');
+    })
+
   }
 });
