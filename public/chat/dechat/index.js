@@ -41,6 +41,7 @@ var verzenden = document.getElementById('verzenden').addEventListener('click', (
 
   socket.emit("bericht-data",data);
   socket.emit("ik",data);
+  //De input word geclear
   document.getElementById("bericht").value = "";
 
 });
@@ -177,6 +178,7 @@ var input_berichte = document.getElementById("bericht").addEventListener("keypre
     //Naar server verzonden
     socket.emit("bericht-data",data);
     socket.emit("ik",data);
+    //De input word gecleard
     document.getElementById("bericht").value = "";
   }
 });
