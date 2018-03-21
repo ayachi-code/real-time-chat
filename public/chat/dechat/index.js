@@ -223,10 +223,12 @@ socket.on("prive-lijst-vragen",(data) => {
     var knop_aanvraag_text = document.createTextNode("Prive aanvraag");
 
     
-
+   
     knop_aanvraag.appendChild(knop_aanvraag_text);
     prive_box_a.appendChild(p_prive_box_a_text)
     prive_box_a.appendChild(knop_aanvraag)
+    //Niewue regels
+    prive_box_a.appendChild(br);
     prive_box_a.appendChild(br);
 
   }
