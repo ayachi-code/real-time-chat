@@ -186,4 +186,13 @@ var input_berichte = document.getElementById("bericht").addEventListener("keypre
 //Event listener van prive chat nu gemaakt
 var prive = document.getElementById("prive-chat-nu").addEventListener('click',() => {
   console.log("prive chat word geopend");
+  de_wie_is_online = createDiv("prive chat starten");
+  //Dit is de div die word gemaakt :))))
+  de_wie_is_online.style('width', '250px');
+  de_wie_is_online.style('height', '250px');
+  de_wie_is_online.style('bottom', '0');
+  de_wie_is_online.style('left','0');
+  de_wie_is_online.style('position','absolute');
+  de_wie_is_online.style('background-color','darkgray');
+  de_wie_is_online.style('margin-bottom','50px');
 })
