@@ -85,7 +85,7 @@ io.sockets.on('connection',(socket) => {
       
       //Als ik prive-lijst-vragen ontvang
       socket.on("prive-lijst-vragen",() => {
-        
+        var mensen_die_online_zijn = gebruikers.toString();
       });
 
 
