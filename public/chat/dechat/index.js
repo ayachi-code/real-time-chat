@@ -2,6 +2,8 @@ var socket = io();
 
 var naam = localStorage.getItem("naam");
 
+//var prive_box_a
+var prive_box_a;
 
 var atypenb;
 
@@ -29,6 +31,8 @@ function setup() {
       //p tags worden hier geladen
       socket.emit("denaam",naam);
       socket.emit("ik_gejoint");
+      //Prive box is bij het begin weg
+      $("#prive_box").hide();
 
 
 }
@@ -191,19 +195,14 @@ var prive = document.getElementById("prive-chat-nu").addEventListener('click',()
   waar += 1;
   console.log("prive chat word geopend");
   if (waar == 1) {
+    //Naar server...
     socket.emit("prive-lijst-vragen");
-    prive_doen = createDiv("prive chat starten");
-    //Dit is de div die word gemaakt :))))
-    prive_doen.style('width', '250px');
-    prive_doen.style('height', '250px');
-    prive_doen.style('bottom', '0');
-    prive_doen.style('left','0');
-    prive_doen.style('position','absolute');
-    prive_doen.style('background-color','darkgray');
-    prive_doen.style('margin-bottom','50px');
+    $("#prive_box").show();
+
   } else if(waar != 1) {
     console.log("prive chat word verwijnd");
-    prive_doen.hide();
+    $("#prive_box").hide();
+    $("#prive_box").empty();
     waar = 0;
   }
  
@@ -212,6 +211,18 @@ var prive = document.getElementById("prive-chat-nu").addEventListener('click',()
 socket.on("prive-lijst-vragen",(data) => {
   for(var i = 0; i < data.length;i++) {
     //De online gebruiker word gedisplayed
-    prive_doen.child(createP("Gebruiler: " + data[i]));
+    prive_box_a = document.getElementById("prive_box");
+    //P word gemaakt
+
+    var br = document.createElement("br");
+    var p_prive_box_a = document.createElement("p");
+    var p_prive_box_a_text = document.createTextNode(data[i]);
+
+
+
+    prive_box_a.appendChild(p_prive_box_a_text)
+    prive_box_a.appendChild(br);
+
+    //De knop makee
   }
 });
